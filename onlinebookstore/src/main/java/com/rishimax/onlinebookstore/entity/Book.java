@@ -35,7 +35,7 @@ public class Book {
 	private boolean active;
 	
 	@Column(name = "units_in_stock")
-	private int unitsInStck;
+	private int unitsInStock;
 	
 	@Column(name = "date_created")
 	private Date createdOn;
@@ -103,12 +103,12 @@ public class Book {
 		this.active = active;
 	}
 
-	public int getUnitsInStck() {
-		return unitsInStck;
+	public int getUnitsInStock() {
+		return unitsInStock;
 	}
 
-	public void setUnitsInStck(int unitsInStck) {
-		this.unitsInStck = unitsInStck;
+	public void setUnitsInStock(int unitsInStock) {
+		this.unitsInStock = unitsInStock;
 	}
 
 	public Date getCreatedOn() {
@@ -138,7 +138,7 @@ public class Book {
 	@Override
 	public String toString() {
 		return "Book [id=" + id + ", sku=" + sku + ", name=" + name + ", description=" + description + ", unitPrice="
-				+ unitPrice + ", imageUrl=" + imageUrl + ", active=" + active + ", unitsInStck=" + unitsInStck
+				+ unitPrice + ", imageUrl=" + imageUrl + ", active=" + active + ", unitsInStock=" + unitsInStock
 				+ ", createdOn=" + createdOn + ", updatedOn=" + updatedOn + ", category=" + category + "]";
 	}
 	

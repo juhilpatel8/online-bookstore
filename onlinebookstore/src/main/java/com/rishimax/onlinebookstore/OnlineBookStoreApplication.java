@@ -13,4 +13,4 @@ public class OnlineBookStoreApplication {
 
 }
 
-//Search books based on keyword
+//Master detail page for individual book
