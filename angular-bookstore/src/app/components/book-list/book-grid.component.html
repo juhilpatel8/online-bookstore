@@ -25,5 +25,41 @@
         No Books Found
       </div>
     </div>
-  </div>
+    <div class="row">
+      <!-- Handle Page Size-->
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="mr-2">Page Size:</span>
+          </div>
+          <div class="col-md-8">
+            <select (change)="updatePageSize($event.target.value)" 
+            class="form-control-md"
+            style="width: 25%;">
+            <option selected>5</option>
+            <option >10</option>
+            <option >20</option>
+            <option >50</option>
+          
+          </select>
+          </div>
+        </div>
+      </div>
+      <!-- Handle Pagination -->
+      <div class="col-md-6">
+        <ngb-pagination [(page)] = "currentPage"
+                        [pageSize] = "pageSize"
+                        [collectionSize] = "totalRecords"
+                        (pageChange) = "listBooks()"
+                        class="d-flex justify-content-end ">
+                        <ng-template ngbPaginationPrevious> Prev </ng-template>
+                        <ng-template ngbPaginationNext> Next </ng-template>
+                        <ng-template ngbPaginationFirst> First </ng-template>
+                        <ng-template ngbPaginationLast> Last </ng-template>
+                      </ngb-pagination>
+      </div>
+    </div>
+    
+    </div>
 </div>
+
