@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Book } from 'src/app/common/book';
 import { ActivatedRoute } from '@angular/router';
+
+import { Book } from 'src/app/common/book';
+import { CartItem } from 'src/app/common/cart-item';
 import { BookService } from 'src/app/service/book.service';
 import { CartService } from 'src/app/services/cart.service';
-import { CartItem } from 'src/app/common/cart-item';
 
 @Component({
   selector: 'app-book-details',
