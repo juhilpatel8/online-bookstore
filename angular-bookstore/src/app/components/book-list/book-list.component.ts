@@ -36,7 +36,8 @@ export class BookListComponent implements OnInit {
   ngOnInit(): void {
     this._activatedRoute.paramMap.subscribe( () => {
           this.listBooks();
-    });
+      }
+    );
   }
 
   listBooks(){
