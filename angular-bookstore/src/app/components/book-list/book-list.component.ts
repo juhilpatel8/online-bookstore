@@ -3,7 +3,7 @@ import { Book } from 'src/app/common/book';
 import { BookService } from 'src/app/service/book.service';
 import { ActivatedRoute } from '@angular/router';
 import { NgbPaginationConfig } from '@ng-bootstrap/ng-bootstrap';
-import { CartService } from 'src/app/services/cart.service';
+import { CartService } from 'src/app/service/cart.service';
 import { CartItem } from 'src/app/common/cart-item';
 import { NgxSpinnerService } from 'ngx-spinner';
 
