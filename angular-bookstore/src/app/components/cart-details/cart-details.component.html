@@ -26,7 +26,22 @@
                                 <td>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <p>Quantity: {{ cartItem.quantity }}</p>
+                                            <p>Quantity: <span (click)="remove(cartItem)" class="text-danger pointer float-right">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </span></p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <button (click)="incrementQuantity(cartItem)" class="btn btn-primary btn-sm float-left">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                        <div class="col-md-4 text-center">
+                                            {{ cartItem.quantity }}
+                                        </div>
+                                        <div class="col-md-4">
+                                            <button (click)="decrementQuantity(cartItem)" class="btn btn-primary btn-sm float-right">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
                                         </div>
                                         <div class="col-md-12 mt-2">
                                             <p>SubTotal: {{ cartItem.quantity * cartItem.unitPrice | currency:'INR'}}</p>
@@ -41,6 +56,7 @@
                                 <p>Total quantity: {{totalQuantity}}</p>
                                 <p>Shipping: Free</p>
                                 <p>Total Price: {{ totalPrice | currency: 'INR' }} </p>
+                                <a class="btn btn-primary" routerLink="/checkout">Checkout</a>
                             </td>
                         </tr>
                     </table>

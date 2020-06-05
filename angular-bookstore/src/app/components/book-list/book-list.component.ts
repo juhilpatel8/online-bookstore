@@ -105,7 +105,6 @@ export class BookListComponent implements OnInit {
   }
 
   addToCart(book:Book){
-    console.log(`book name: ${book.name} book price: ${book.unitPrice}`);
     const cartItem = new CartItem(book);
     this._cartService.addToCart(cartItem);
   }
