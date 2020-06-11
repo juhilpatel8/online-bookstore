@@ -65,3 +65,17 @@
     </div>    
   </div>
 </div>
+<div *ngIf="loader">
+<div class="center">
+  <div class="LoaderBalls">
+    <div class="LoaderBalls__item"></div>
+    <div class="LoaderBalls__item"></div>
+    <div class="LoaderBalls__item"></div>
+  </div>
+</div>
+</div>
+<div *ngIf="serverError">
+
+  <div class="alert alert-danger"> Server Error...Please try again later</div>
+
+</div>
